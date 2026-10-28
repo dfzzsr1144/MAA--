@@ -1,6 +1,7 @@
 {
   "patch_id": "LocalYueMan20261028",
-  "version": 1,
+  "version": 2,
+  "release_version": "0.2.0",
   "tested_maa": "v6.20.1",
   "frame": [
     1280,
@@ -14,16 +15,16 @@
       "task": "LocalYueMan20261028Terminal",
       "template": "LocalYueMan20261028/Terminal.png",
       "crop": [
-        887,
-        149,
-        140,
-        91
+        724,
+        268,
+        61,
+        17
       ],
       "roi": [
-        690,
-        95,
-        370,
-        215
+        700,
+        240,
+        200,
+        70
       ],
       "click": [
         865,
@@ -32,7 +33,7 @@
         36
       ],
       "postDelay": 3000,
-      "threshold": 0.75
+      "threshold": 0.8
     },
     {
       "name": "Infrast",
@@ -149,16 +150,16 @@
       "task": "LocalYueMan20261028Friends",
       "template": "LocalYueMan20261028/Friends.png",
       "crop": [
-        291,
-        551,
-        118,
-        26
+        377,
+        573,
+        44,
+        23
       ],
       "roi": [
-        260,
-        520,
-        185,
-        100
+        350,
+        550,
+        85,
+        55
       ],
       "click": [
         350,
@@ -167,7 +168,7 @@
         16
       ],
       "postDelay": 1000,
-      "threshold": 0.72
+      "threshold": 0.8
     },
     {
       "name": "Depot",
@@ -250,5 +251,58 @@
       "postDelay": 500,
       "threshold": 0.75
     }
-  ]
+  ],
+  "guard_tasks": {
+    "LocalYueMan20261028CancelAdjustment": {
+      "algorithm": "OcrDetect",
+      "action": "ClickSelf",
+      "text": [
+        "放弃调整"
+      ],
+      "roi": [
+        1050,
+        20,
+        230,
+        90
+      ],
+      "postDelay": 700,
+      "maxTimes": 2,
+      "exceededNext": [
+        "Stop"
+      ],
+      "next": [
+        "Friends-Entry"
+      ]
+    },
+    "LocalYueMan20261028ExitAppearance": {
+      "algorithm": "MatchTemplate",
+      "action": "ClickRect",
+      "template": "SwitchTheme@ChangeTheme.png",
+      "templThreshold": 0.85,
+      "maskRange": [
+        0,
+        255
+      ],
+      "roi": [
+        563,
+        566,
+        132,
+        132
+      ],
+      "specificRect": [
+        25,
+        20,
+        85,
+        40
+      ],
+      "postDelay": 700,
+      "maxTimes": 2,
+      "exceededNext": [
+        "Stop"
+      ],
+      "next": [
+        "Friends-Entry"
+      ]
+    }
+  }
 }

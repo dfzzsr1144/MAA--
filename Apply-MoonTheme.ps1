@@ -92,7 +92,18 @@ foreach ($item in $manifest.entries) {
         roi = @($item.roi)
         specificRect = @($item.click)
         postDelay = $item.postDelay
+        maxTimes = 3
+        exceededNext = @('Stop')
     }
+}
+if ($null -ne $manifest.PSObject.Properties['guard_tasks']) {
+    $guardNames = @()
+    foreach ($g in $manifest.guard_tasks.PSObject.Properties) {
+        if ($tasks.ContainsKey($g.Name)) { throw "Task name conflict: $($g.Name)" }
+        $patch[$g.Name] = $g.Value
+        $guardNames += $g.Name
+    }
+    $patch['Friends-Entry']['next'] = $guardNames + @($patch['Friends-Entry']['next'])
 }
 $json = $patch | ConvertTo-Json -Depth 20
 # All reads, collision checks, and template existence checks finish before any writes.
@@ -118,7 +129,7 @@ if ($CheckOnly) {
         elseif ((File-Hash $dest) -ne (File-Hash $src)) { $ok = $false }
     }
     if (!$ok) { throw 'Patch is missing or differs from current resources. Run the restore tool after exiting MAA.' }
-    Write-Host 'PASS: all 18 task definitions and 9 templates are installed and current.'
+    Write-Host ("PASS: all {0} task definitions and {1} templates are installed and current." -f $patch.Count, $manifest.entries.Count)
     exit 0
 }
 [IO.Directory]::CreateDirectory((Split-Path -Parent $target)) | Out-Null

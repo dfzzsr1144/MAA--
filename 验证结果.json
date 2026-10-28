@@ -1,23 +1,36 @@
 {
+  "patch_version": "0.2.0",
   "maa_version": "v6.20.1",
   "frame": [
     1280,
     720
   ],
-  "verification": "offline; no emulator/game actions",
+  "verification": "offline regression plus native resource load; live navigation recorded separately",
   "templates": [
     {
       "entry": "Terminal",
-      "threshold": 0.75,
+      "threshold": 0.8,
       "screenshot_score": 1.0,
-      "promotional_image_score": 0.86501,
-      "max_negative_score": 0.24622
+      "promotional_image_score": 0.92016,
+      "recorded_failure_frame_scores": [
+        0.99791,
+        0.99808,
+        0.99801,
+        0.99779
+      ],
+      "max_negative_score": 0.43746
     },
     {
       "entry": "Infrast",
       "threshold": 0.75,
       "screenshot_score": 1.0,
       "promotional_image_score": 0.93966,
+      "recorded_failure_frame_scores": [
+        0.95625,
+        0.95363,
+        0.95233,
+        0.96858
+      ],
       "max_negative_score": 0.43239
     },
     {
@@ -25,6 +38,12 @@
       "threshold": 0.75,
       "screenshot_score": 1.0,
       "promotional_image_score": 0.81394,
+      "recorded_failure_frame_scores": [
+        0.96335,
+        0.93317,
+        0.96294,
+        0.91977
+      ],
       "max_negative_score": 0.23795
     },
     {
@@ -32,6 +51,12 @@
       "threshold": 0.75,
       "screenshot_score": 1.0,
       "promotional_image_score": 0.83715,
+      "recorded_failure_frame_scores": [
+        0.85929,
+        0.89166,
+        0.90405,
+        0.94758
+      ],
       "max_negative_score": 0.26366
     },
     {
@@ -39,20 +64,38 @@
       "threshold": 0.75,
       "screenshot_score": 1.0,
       "promotional_image_score": 0.84644,
+      "recorded_failure_frame_scores": [
+        0.89919,
+        0.90887,
+        0.91094,
+        0.8886
+      ],
       "max_negative_score": 0.36022
     },
     {
       "entry": "Friends",
-      "threshold": 0.72,
+      "threshold": 0.8,
       "screenshot_score": 1.0,
-      "promotional_image_score": 0.75233,
-      "max_negative_score": 0.13878
+      "promotional_image_score": 0.87071,
+      "recorded_failure_frame_scores": [
+        0.98721,
+        0.98576,
+        0.98197,
+        0.98682
+      ],
+      "max_negative_score": 0.35942
     },
     {
       "entry": "Depot",
       "threshold": 0.75,
       "screenshot_score": 1.0,
       "promotional_image_score": 0.83998,
+      "recorded_failure_frame_scores": [
+        0.87977,
+        0.83468,
+        0.84954,
+        0.87311
+      ],
       "max_negative_score": 0.30787
     },
     {
@@ -60,6 +103,12 @@
       "threshold": 0.75,
       "screenshot_score": 1.0,
       "promotional_image_score": 0.84791,
+      "recorded_failure_frame_scores": [
+        0.9465,
+        0.96584,
+        0.96313,
+        0.95391
+      ],
       "max_negative_score": 0.32175
     },
     {
@@ -67,12 +116,65 @@
       "threshold": 0.75,
       "screenshot_score": 1.0,
       "promotional_image_score": 0.83501,
+      "recorded_failure_frame_scores": [
+        0.9455,
+        0.95389,
+        0.96353,
+        0.94098
+      ],
       "max_negative_score": 0.21641
     }
   ],
+  "recorded_failure_frames": 4,
   "negative_screenshots": 13,
   "core_version": "v6.20.1",
   "native_resource_load": "PASS",
   "custom_task_registration": "PASS (9 entries; not executed)",
-  "native_error_log": "PASS (no ERR entries)"
+  "native_error_log": "PASS (no ERR entries)",
+  "live_navigation": {
+    "touch_mode": "adb; temporary native instance only",
+    "checks": {
+      "friends_from_normal_home": {
+        "result": "PASS",
+        "tasks": [
+          "Friends-Entry",
+          "LocalYueMan20261028Friends",
+          "Stop"
+        ]
+      },
+      "mall_from_normal_home": {
+        "result": "PASS",
+        "tasks": [
+          "Mall-Entry",
+          "LocalYueMan20261028Mall",
+          "Stop"
+        ]
+      },
+      "friends_from_appearance": {
+        "result": "PASS",
+        "tasks": [
+          "Friends-Entry",
+          "LocalYueMan20261028ExitAppearance",
+          "Friends-Entry",
+          "LocalYueMan20261028Friends",
+          "Stop"
+        ]
+      },
+      "friends_from_adjustment": {
+        "result": "PASS",
+        "tasks": [
+          "Friends-Entry",
+          "LocalYueMan20261028CancelAdjustment",
+          "Friends-Entry",
+          "LocalYueMan20261028ExitAppearance",
+          "Friends-Entry",
+          "LocalYueMan20261028Friends",
+          "Stop"
+        ]
+      }
+    },
+    "full_credit_workflow": "not executed",
+    "shopping": "not executed",
+    "character_adjustment": "cancelled without saving"
+  }
 }
