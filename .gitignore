@@ -1,0 +1,5 @@
+backups/
+*.tmp
+*.log
+Thumbs.db
+Desktop.ini

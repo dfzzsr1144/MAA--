@@ -1,0 +1,78 @@
+{
+  "maa_version": "v6.20.1",
+  "frame": [
+    1280,
+    720
+  ],
+  "verification": "offline; no emulator/game actions",
+  "templates": [
+    {
+      "entry": "Terminal",
+      "threshold": 0.75,
+      "screenshot_score": 1.0,
+      "promotional_image_score": 0.86501,
+      "max_negative_score": 0.24622
+    },
+    {
+      "entry": "Infrast",
+      "threshold": 0.75,
+      "screenshot_score": 1.0,
+      "promotional_image_score": 0.93966,
+      "max_negative_score": 0.43239
+    },
+    {
+      "entry": "Recruit",
+      "threshold": 0.75,
+      "screenshot_score": 1.0,
+      "promotional_image_score": 0.81394,
+      "max_negative_score": 0.23795
+    },
+    {
+      "entry": "Mall",
+      "threshold": 0.75,
+      "screenshot_score": 1.0,
+      "promotional_image_score": 0.83715,
+      "max_negative_score": 0.26366
+    },
+    {
+      "entry": "Task",
+      "threshold": 0.75,
+      "screenshot_score": 1.0,
+      "promotional_image_score": 0.84644,
+      "max_negative_score": 0.36022
+    },
+    {
+      "entry": "Friends",
+      "threshold": 0.72,
+      "screenshot_score": 1.0,
+      "promotional_image_score": 0.75233,
+      "max_negative_score": 0.13878
+    },
+    {
+      "entry": "Depot",
+      "threshold": 0.75,
+      "screenshot_score": 1.0,
+      "promotional_image_score": 0.83998,
+      "max_negative_score": 0.30787
+    },
+    {
+      "entry": "OperBox",
+      "threshold": 0.75,
+      "screenshot_score": 1.0,
+      "promotional_image_score": 0.84791,
+      "max_negative_score": 0.32175
+    },
+    {
+      "entry": "Gacha",
+      "threshold": 0.75,
+      "screenshot_score": 1.0,
+      "promotional_image_score": 0.83501,
+      "max_negative_score": 0.21641
+    }
+  ],
+  "negative_screenshots": 13,
+  "core_version": "v6.20.1",
+  "native_resource_load": "PASS",
+  "custom_task_registration": "PASS (9 entries; not executed)",
+  "native_error_log": "PASS (no ERR entries)"
+}

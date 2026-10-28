@@ -1,0 +1,254 @@
+{
+  "patch_id": "LocalYueMan20261028",
+  "version": 1,
+  "tested_maa": "v6.20.1",
+  "frame": [
+    1280,
+    720
+  ],
+  "entries": [
+    {
+      "name": "Terminal",
+      "entry": "Terminal-Entry",
+      "base": "TerminalDefault",
+      "task": "LocalYueMan20261028Terminal",
+      "template": "LocalYueMan20261028/Terminal.png",
+      "crop": [
+        887,
+        149,
+        140,
+        91
+      ],
+      "roi": [
+        690,
+        95,
+        370,
+        215
+      ],
+      "click": [
+        865,
+        202,
+        70,
+        36
+      ],
+      "postDelay": 3000,
+      "threshold": 0.75
+    },
+    {
+      "name": "Infrast",
+      "entry": "Infrast-Entry",
+      "base": "InfrastDefault",
+      "task": "LocalYueMan20261028Infrast",
+      "template": "LocalYueMan20261028/Infrast.png",
+      "crop": [
+        965,
+        612,
+        70,
+        33
+      ],
+      "roi": [
+        920,
+        565,
+        210,
+        140
+      ],
+      "click": [
+        994,
+        634,
+        30,
+        18
+      ],
+      "postDelay": 5000,
+      "threshold": 0.75
+    },
+    {
+      "name": "Recruit",
+      "entry": "Recruit-Entry",
+      "base": "RecruitDefault",
+      "task": "LocalYueMan20261028Recruit",
+      "template": "LocalYueMan20261028/Recruit.png",
+      "crop": [
+        986,
+        476,
+        78,
+        23
+      ],
+      "roi": [
+        955,
+        440,
+        145,
+        105
+      ],
+      "click": [
+        1000,
+        505,
+        50,
+        20
+      ],
+      "postDelay": 500,
+      "threshold": 0.75
+    },
+    {
+      "name": "Mall",
+      "entry": "Mall-Entry",
+      "base": "MallDefault",
+      "task": "LocalYueMan20261028Mall",
+      "template": "LocalYueMan20261028/Mall.png",
+      "crop": [
+        741,
+        444,
+        151,
+        45
+      ],
+      "roi": [
+        690,
+        410,
+        260,
+        135
+      ],
+      "click": [
+        807,
+        487,
+        50,
+        20
+      ],
+      "postDelay": 500,
+      "threshold": 0.75
+    },
+    {
+      "name": "Task",
+      "entry": "Task-Entry",
+      "base": "TaskDefault",
+      "task": "LocalYueMan20261028Task",
+      "template": "LocalYueMan20261028/Task.png",
+      "crop": [
+        727,
+        575,
+        140,
+        40
+      ],
+      "roi": [
+        680,
+        530,
+        245,
+        150
+      ],
+      "click": [
+        800,
+        627,
+        55,
+        20
+      ],
+      "postDelay": 1000,
+      "threshold": 0.75
+    },
+    {
+      "name": "Friends",
+      "entry": "Friends-Entry",
+      "base": "FriendsDefault",
+      "task": "LocalYueMan20261028Friends",
+      "template": "LocalYueMan20261028/Friends.png",
+      "crop": [
+        291,
+        551,
+        118,
+        26
+      ],
+      "roi": [
+        260,
+        520,
+        185,
+        100
+      ],
+      "click": [
+        350,
+        576,
+        40,
+        16
+      ],
+      "postDelay": 1000,
+      "threshold": 0.72
+    },
+    {
+      "name": "Depot",
+      "entry": "Depot-Entry",
+      "base": "DepotDefault",
+      "task": "LocalYueMan20261028Depot",
+      "template": "LocalYueMan20261028/Depot.png",
+      "crop": [
+        1150,
+        612,
+        70,
+        48
+      ],
+      "roi": [
+        1110,
+        575,
+        170,
+        140
+      ],
+      "click": [
+        1170,
+        664,
+        30,
+        15
+      ],
+      "postDelay": 500,
+      "threshold": 0.75
+    },
+    {
+      "name": "OperBox",
+      "entry": "OperBox-Entry",
+      "base": "OperBoxDefault",
+      "task": "LocalYueMan20261028OperBox",
+      "template": "LocalYueMan20261028/OperBox.png",
+      "crop": [
+        976,
+        302,
+        185,
+        48
+      ],
+      "roi": [
+        920,
+        270,
+        320,
+        140
+      ],
+      "click": [
+        1115,
+        351,
+        55,
+        20
+      ],
+      "postDelay": 500,
+      "threshold": 0.75
+    },
+    {
+      "name": "Gacha",
+      "entry": "Gacha-Entry",
+      "base": "GachaDefault",
+      "task": "LocalYueMan20261028Gacha",
+      "template": "LocalYueMan20261028/Gacha.png",
+      "crop": [
+        1085,
+        480,
+        106,
+        25
+      ],
+      "roi": [
+        1060,
+        445,
+        190,
+        115
+      ],
+      "click": [
+        1110,
+        505,
+        55,
+        20
+      ],
+      "postDelay": 500,
+      "threshold": 0.75
+    }
+  ]
+}
